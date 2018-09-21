@@ -1,0 +1,10 @@
+---
+version: "3.2"
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - target: 8080
+        published: ${EXTERNAL_PORT:-8088}
+    command: -use-x-forwarded-for
