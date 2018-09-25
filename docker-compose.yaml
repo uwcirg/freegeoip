@@ -8,3 +8,4 @@ services:
       - target: 8080
         published: ${EXTERNAL_PORT:-8088}
     command: -use-x-forwarded-for
+    restart: unless-stopped
